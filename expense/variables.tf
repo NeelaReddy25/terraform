@@ -1,3 +1,4 @@
+# ec2 variables
 variable "instance_names" {
     type = list
     default = ["db", "backend", "frontend"]
@@ -22,6 +23,7 @@ variable "common_tags" {
     }
 }
 
+#sg variables
 variable "sg_name" {
     default = "allow_ssh"
 }
@@ -41,5 +43,17 @@ variable "protocol" {
 variable "allowed_cidr" {
     type = list(string)
     default = ["0.0.0.0/0"]
+}
 
+#route53 variables
+variable "zone_id" {
+    default = "Z02253671OIE92FOK6QEZ"
+}
+
+variable "domain_name" {
+    default = "neelareddy.store"
+}
+
+variable "instance_name" {
+    default = "expense"
 }
